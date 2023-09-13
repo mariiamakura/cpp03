@@ -17,10 +17,7 @@ ClapTrap::ClapTrap(std::string name) {
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other) {
-    this->_name = other._name;
-    this->_hitPoints = other._hitPoints;
-    this->_energyPoints = other._energyPoints;
-    this->_attackDamage = other._attackDamage;
+    *this = other;
     std::cout << ":ClapTrap: copy constructor called" << std::endl;
 }
 
@@ -71,4 +68,11 @@ void ClapTrap::takeDamage(unsigned int amount) {
         this->_hitPoints = 0;
         std::cout << ":ClapTrap: " << this->_name << "  doesn't have enough hitPoints to take damage" << std::endl;
     }
+}
+
+void ClapTrap::printClapTrap() {
+    std::cout << "---ClapTrap------"<<std::endl;
+    std::cout << ":ClapTrap: hit points " << this->_hitPoints << std::endl;
+    std::cout << ":ClapTrap: energy points " << this->_energyPoints << std::endl;
+    std::cout << ":ClapTrap: attack damage " << this->_attackDamage << std::endl;
 }

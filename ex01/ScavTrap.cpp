@@ -19,13 +19,33 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other) {
-    this->_name = other._name;
-    this->_hitPoints = other._hitPoints;
-    this->_energyPoints = other._energyPoints;
-    this->_attackDamage = other._attackDamage;
+    *this = other;
     std::cout << "::ScavTrap:: copy constructor called" << std::endl;
 }
 
 ScavTrap::~ScavTrap() {
     std::cout << "::ScavTrap:: destructor called" << std::endl;
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &other) {
+    if (this != &other)
+    {
+       ClapTrap::operator=(other);
+       this->_guardMode = other._guardMode;
+    }
+    std::cout << "::ScavTrap:: copy assigment operator called" << std::endl;
+    return (*this);
+}
+
+void ScavTrap::printScavTrap() {
+    std::cout << "---ScavTrap------"<<std::endl;
+    std::cout << "::ScavTrap:: hit points " << this->_hitPoints << std::endl;
+    std::cout << "::ScavTrap::  energy points " << this->_energyPoints << std::endl;
+    std::cout << "::ScavTrap::  attack damage " << this->_attackDamage << std::endl;
+    std::cout << "::ScavTrap::  guard mode " << this->_guardMode << std::endl;
+}
+
+void ScavTrap::guardGate() {
+    this->_guardMode = true;
+    std::cout << "::ScavTrap:: " << this->_name << " is in Guard Mode now " << this->_guardMode << std::endl;
 }

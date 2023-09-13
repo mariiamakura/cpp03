@@ -10,7 +10,11 @@ class ScavTrap : public ClapTrap {
         ~ScavTrap();
 
         ScavTrap(const ScavTrap &other);
+
+        ScavTrap &operator=(const ScavTrap &other);
+
         void guardGate();
+        void printScavTrap();
     private:
         bool _guardMode;
 };

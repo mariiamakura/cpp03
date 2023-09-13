@@ -17,6 +17,8 @@ class ClapTrap {
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 
+        void printClapTrap();
+
     protected:
         std::string _name;
         unsigned int _hitPoints;
