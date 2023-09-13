@@ -19,7 +19,7 @@ $(NAME) : $(OBJS) $(SRCS)
 clean :
 	rm -fr obj
 
-fclean :
+fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
