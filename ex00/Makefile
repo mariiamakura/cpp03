@@ -11,7 +11,7 @@ obj :
 	@mkdir -p obj
 
 obj/%.o : %.cpp
-	c++ $(CFLAGS) -c $< -o $(NAME)
+	c++ $(CFLAGS) -c $< -o $@
 
 $(NAME) : $(OBJS) $(SRCS)
 	c++ $(FLAGS) $(OBJS) -o $(NAME)
