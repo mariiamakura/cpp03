@@ -36,3 +36,13 @@ void FragTrap::printFragTrap()  {
     std::cout << ">>FragTrap<< energy points " << this->_energyPoints << std::endl;
     std::cout << ">>FragTrap<< attack damage " << this->_attackDamage << std::endl;
 }
+
+//void FragTrap::attack(const std::string &target) {
+//    if (this->_energyPoints <= 0)
+//        std::cout << ">>FragTrap<< " << this->_name << " doesn't have enough energy points to attack" << std::endl;
+//    else {
+//        this->_energyPoints--;
+//        std::cout << ">>FragTrap<<" << this->_name << " attacks " << target
+//                  << ". " << this->_energyPoints << " energy points is left" << std::endl;
+//    }
+//}

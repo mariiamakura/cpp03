@@ -8,6 +8,8 @@ int main() {
 
     test2 = test1;
 
+    test.takeDamage(13);
+    test.attack("Bob");
     one.printClapTrap();
     test.printFragTrap();
     test.highFivesGuys();

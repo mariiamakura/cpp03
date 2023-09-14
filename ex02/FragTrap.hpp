@@ -17,6 +17,7 @@ public:
 
     void highFivesGuys(void);
     void printFragTrap(void);
+    //void attack(const std::string &target);
 };
 
 #endif

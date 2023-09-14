@@ -8,9 +8,9 @@ int main() {
 
     test3 = test;
 
-    test3.guardGate();
+    //test3.guardGate();
     test3.printScavTrap();
     one.printClapTrap();
-
+    test3.attack("Bob");
 }
 
