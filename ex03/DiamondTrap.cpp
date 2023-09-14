@@ -2,7 +2,6 @@
 
 DiamondTrap::DiamondTrap() {
     this->_name = "default";
-    //std::cout << ClapTrap::_hitPoints <<std::endl;
     this->_hitPoints = ClapTrap::_hitPoints;
     this->_energyPoints = ScavTrap::_energyPoints;
     this->_attackDamage = FragTrap::_attackDamage;
