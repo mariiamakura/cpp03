@@ -1,17 +1,18 @@
-#include "FragTrap.hpp"
+#include "include/DiamondTrap.hpp"
 
 int main() {
-    ClapTrap one("TEST");
-    FragTrap test("Mariia");
-    FragTrap test1(test);
-    FragTrap test2;
+    //FragTrap test_frog;
+    DiamondTrap mariia("Mariia");
+    DiamondTrap test(mariia);
 
-    test2 = test1;
+    //test = mariia;
 
-    test.takeDamage(13);
+    test.takeDamage(7);
+    test.beRepaired(3);
     test.attack("Bob");
-    one.printClapTrap();
-    test.printFragTrap();
-    test.highFivesGuys();
+    test.printDiamond();
+    test.whoAmI();
+    //mariia.printClapTrap();
+
 }
 

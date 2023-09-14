@@ -1,4 +1,4 @@
-#include "ClapTrap.hpp"
+#include "include/ClapTrap.hpp"
 
 ClapTrap::ClapTrap() {
     std::cout << ":ClapTrap: (default) constructor called" << std::endl;
@@ -77,6 +77,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
 
 void ClapTrap::printClapTrap() {
     std::cout << "---ClapTrap------"<<std::endl;
+    std::cout <<  ":ClapTrap: name " << this->_name << std::endl;
     std::cout << ":ClapTrap: hit points " << this->_hitPoints << std::endl;
     std::cout << ":ClapTrap: energy points " << this->_energyPoints << std::endl;
     std::cout << ":ClapTrap: attack damage " << this->_attackDamage << std::endl;

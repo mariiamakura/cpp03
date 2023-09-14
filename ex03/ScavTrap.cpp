@@ -1,4 +1,4 @@
-#include "ScavTrap.hpp"
+#include "include/ScavTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap() {
     this->_name = "default";
