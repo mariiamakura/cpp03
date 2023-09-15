@@ -2,7 +2,8 @@
 
 ScavTrap::ScavTrap() : ClapTrap() {
     this->_name = "default";
-    this->_attackDamage = 20;
+    if (this->_attackDamage != 30)
+        this->_attackDamage = 20;
     this->_hitPoints = 100;
     this->_energyPoints = 50;
     this->_guardMode = false;
@@ -11,7 +12,8 @@ ScavTrap::ScavTrap() : ClapTrap() {
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
     this->_name = name;
-    this->_attackDamage = 20;
+    if (this->_attackDamage != 30)
+        this->_attackDamage = 20;
     this->_hitPoints = 100;
     this->_energyPoints = 50;
     this->_guardMode = false;
@@ -50,10 +52,9 @@ void ScavTrap::guardGate() {
     std::cout << "::ScavTrap:: " << this->_name << " is in Guard Mode now " << this->_guardMode << std::endl;
 }
 
-
 void ScavTrap::attack(const std::string &target) {
-    if (this->_energyPoints <= 0)
-        std::cout << "::ScavTrap:: " << this->_name << " doesn't have enough energy points to attack" << std::endl;
+    if (this->_energyPoints <= 0 || this->_hitPoints <= 0)
+        std::cout << "::ScavTrap:: " << this->_name << " doesn't have enough energy/hit points to attack" << std::endl;
     else if (this->_guardMode)
         std::cout << "::ScavTrap:: " << this->_name << " in Guard Mode, it doesn't get any damage" << std::endl;
     else {

@@ -51,9 +51,9 @@ void ScavTrap::guardGate() {
 }
 
 void ScavTrap::attack(const std::string &target) {
-    if (this->_energyPoints <= 0)
-        std::cout << "::ScavTrap:: " << this->_name << " doesn't have enough energy points to attack" << std::endl;
-    else if (this->_guardMode == true)
+    if (this->_energyPoints <= 0 || this->_hitPoints <= 0)
+        std::cout << "::ScavTrap:: " << this->_name << " doesn't have enough energy/hit points to attack" << std::endl;
+    else if (this->_guardMode)
         std::cout << "::ScavTrap:: " << this->_name << " in Guard Mode, it doesn't get any damage" << std::endl;
     else {
         this->_energyPoints--;

@@ -2,7 +2,7 @@
 
 DiamondTrap::DiamondTrap() {
     this->_name = "default";
-    this->_hitPoints = ClapTrap::_hitPoints;
+    this->_hitPoints = FragTrap::_hitPoints;
     this->_energyPoints = ScavTrap::_energyPoints;
     this->_attackDamage = FragTrap::_attackDamage;
     std::cout << "**DiamondTrap** (default) constructor called" << std::endl;
@@ -11,18 +11,18 @@ DiamondTrap::DiamondTrap() {
 DiamondTrap::DiamondTrap(std::string name) {
     ClapTrap::_name = name + "_clap_name";
     this->_name = name;
-    this->_hitPoints = ClapTrap::_hitPoints;
+    this->_hitPoints = FragTrap::_hitPoints;
     this->_energyPoints = ScavTrap::_energyPoints;
     this->_attackDamage = FragTrap::_attackDamage;
     std::cout << "**DiamondTrap** " << this->_name << " constructor called" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other), FragTrap(other), ScavTrap(other) {
-    //*this = other; doesnt work
-    this->_name = other._name;
-    this->_hitPoints = other._hitPoints;
-    this->_energyPoints = other._energyPoints;
-    this->_attackDamage = other._attackDamage;
+    *this = other; //doesnt work
+//    this->_name = other._name;
+//    this->_hitPoints = other._hitPoints;
+//    this->_energyPoints = other._energyPoints;
+//    this->_attackDamage = other._attackDamage;
     std::cout << "**DiamondTrap** copy constructor called" << std::endl;
     return ;
 }

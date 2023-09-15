@@ -8,7 +8,7 @@ int main() {
     test = test2;
 
     test.takeDamage(1);
-    test.takeDamage(10);
+    //test.takeDamage(10);
     test.attack("B");
     test.attack("B");
     test.attack("B");
