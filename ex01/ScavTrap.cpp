@@ -50,14 +50,14 @@ void ScavTrap::guardGate() {
     std::cout << "::ScavTrap:: " << this->_name << " is in Guard Mode now " << this->_guardMode << std::endl;
 }
 
-//void ScavTrap::attack(const std::string &target) {
-//    if (this->_energyPoints <= 0)
-//        std::cout << "::ScavTrap:: " << this->_name << " doesn't have enough energy points to attack" << std::endl;
-//    else if (this->_guardMode == true)
-//        std::cout << "::ScavTrap:: " << this->_name << " in Guard Mode, it doesn't get any damage" << std::endl;
-//    else {
-//        this->_energyPoints--;
-//        std::cout << "::ScavTrap:: " << this->_name << " attacks " << target
-//                  << ". " << this->_energyPoints << " energy points is left" << std::endl;
-//    }
-//}
+void ScavTrap::attack(const std::string &target) {
+    if (this->_energyPoints <= 0)
+        std::cout << "::ScavTrap:: " << this->_name << " doesn't have enough energy points to attack" << std::endl;
+    else if (this->_guardMode == true)
+        std::cout << "::ScavTrap:: " << this->_name << " in Guard Mode, it doesn't get any damage" << std::endl;
+    else {
+        this->_energyPoints--;
+        std::cout << "::ScavTrap:: " << this->_name << " attacks " << target
+                  << ". " << this->_energyPoints << " energy points is left" << std::endl;
+    }
+}

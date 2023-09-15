@@ -10,8 +10,9 @@ int main() {
     test.takeDamage(7);
     test.beRepaired(3);
     test.attack("Bob");
-    test.printDiamond();
+    //test.printDiamond();
     test.whoAmI();
+    test.highFivesGuys();
     //mariia.printClapTrap();
 
 }
